@@ -1,0 +1,7 @@
+jms_serializer:
+    handler:
+        datetime:
+           default_format: 'd/m/y'
+           default_timezone: 'UTC'
+    metadata:
+        auto_detection: true
