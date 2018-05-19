@@ -9,6 +9,7 @@
 namespace Domain\Model;
 
 
+
 class Oportunidade
 {
     /**
@@ -17,13 +18,15 @@ class Oportunidade
     private $idOportunidade;
 
     /**
-     * @var String
+     * @var string
      */
     private $descricao;
+
     /**
      * @var \DateTime
      */
     private $periodoInicial;
+
     /**
      * @var \DateTime
      */
@@ -68,6 +71,4 @@ class Oportunidade
     {
         return $this->periodoFinal;
     }
-
-
 }

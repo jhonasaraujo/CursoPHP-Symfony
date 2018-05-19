@@ -29,11 +29,12 @@ class SerializerService
 
     public function converter($json, $tipo)
     {
-        try{
+        try
+        {
             return $this->serializer->deserialize($json, $tipo,  'json');
-        }catch (\Exception $exception){
+        }catch (\Exception $exception)
+        {
             dump ($exception->getMessage());die;
-
         }
     }
 }

@@ -8,6 +8,7 @@
 
 namespace AppBundle\Controller;
 
+use Domain\Model\Oportunidade;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,9 +22,15 @@ class OportunidadeController extends Controller
      * @param Request $request
      */
     public function salvarAction(Request $request){
+
         $SerializerService = $this->get('infra.serializer.service');
 
+        try {
+            $oportunidade = $SerializerService->converter($request->getContent(),Oportunidade::class);
+              dump($oportunidade); die;
+        }catch(\Exception $exception){
+            dump($exception->getMessage());die;
+        }
 
-        dump($request); die;
     }
 }
