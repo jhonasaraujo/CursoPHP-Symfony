@@ -33,6 +33,11 @@ class Oportunidade
     private $periodoFinal;
 
     /**
+     * @var int
+     */
+    private $qtdVagas;
+
+    /**
      * Oportunidade constructor.
      * @param string $descricao
      * @param \DateTime $periodoInicial
